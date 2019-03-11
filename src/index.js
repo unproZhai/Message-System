@@ -24,6 +24,7 @@ class View extends React.Component {
     user: {},
     room: {},
     messages: {},
+    typing: {},
     sidebarOpen: false,
     userListOpen: window.innerWidth > 1000,
   }
@@ -158,6 +159,7 @@ class View extends React.Component {
         elem && (elem.scrollTop = 100000)
       }, 0),
 
+
     // --------------------------------------
     // Presence
     // --------------------------------------
@@ -212,6 +214,7 @@ class View extends React.Component {
       user,
       room,
       messages,
+      typing,
       sidebarOpen,
       userListOpen,
     } = this.state
@@ -225,6 +228,7 @@ class View extends React.Component {
             user={user}
             rooms={user.rooms}
             messages={messages}
+            typing={typing}
             current={room}
             actions={this.actions}
           />

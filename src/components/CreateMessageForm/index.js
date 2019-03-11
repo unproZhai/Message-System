@@ -30,6 +30,7 @@ export const CreateMessageForm = ({
     >
       <input
         placeholder="Type a Message.."
+        onInput={e => user.isTypingIn({ roomId: room.id })}
       />
       <FileInput state={{ user, room, message }} />
       <button type="submit">
